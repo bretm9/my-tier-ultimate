@@ -44,10 +44,10 @@ class App extends Component<IProps, IState> {
     this.setState({ characters: [...this.state.characters] });
   }
 
-  // toggleMained = (character: CleanedCharacter) => {
-	// 	character.isMained = !character.isMained;
-	// 	this.setState({ characters: [...this.state.characters] });
-  // }
+  toggleMained = (character: CleanedCharacter) => {
+		character.isMained = !character.isMained;
+		this.setState({ characters: [...this.state.characters] });
+  }
 
   updateQuery = (event: any) => {
     event.preventDefault();
