@@ -10,12 +10,12 @@ interface IProps {
   updateWinsAndLosses: (character: CleanedCharacter, isWin: boolean) => void
 }
 
-// function convertTierNumberToGrade(tierNumber: number): string | undefined {
-//   const letters: string[] = ['', 'F', 'C', 'B', 'A', 'A+'];
-//   return letters.find((_letter, index) => {
-//     return index === tierNumber;
-//   });
-// }
+function convertTierNumberToGrade(tierNumber: number): string | undefined {
+  const letters: string[] = ['', 'F', 'C', 'B', 'A', 'A+'];
+  return letters.find((_letter, index) => {
+    return index === tierNumber;
+  });
+}
 
 // function convertWinRateToPercentage(character: CleanedCharacter): string {
 //   const percentage = ((character.wins / (character.wins + character.losses)) * 100);
