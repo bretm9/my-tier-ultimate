@@ -68,7 +68,7 @@ class App extends Component<IProps, IState> {
     return (
       <main>
         <Header />
-        {/* <Switch> */}
+        <Switch>
           <Route 
             exact path='/'
             render={() => {
@@ -108,9 +108,9 @@ class App extends Component<IProps, IState> {
               />
               );
             }}
-          />
-          <Redirect to="/" /> */}
-        {/* </Switch> */}
+          /> */}
+          <Redirect to="/" />
+        </Switch>
       </main>
     )
   }
