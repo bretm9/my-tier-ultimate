@@ -13,19 +13,19 @@ export interface FetchedCharacter {
     }
 }
 
-// export interface CleanedCharacter {
-//   images: {
-//     characterIcon: string;
-//     portrait: string;
-//     seriesIcon: string;
-//   };
-//   name: string;
-//   seriesName: string;
-//   tier: number;
-//   wins: number;
-//   losses: number;
-//   isMained: boolean;
-// }
+export interface CleanedCharacter {
+  images: {
+    characterIcon: string;
+    portrait: string;
+    seriesIcon: string;
+  };
+  name: string;
+  seriesName: string;
+  tier: number;
+  wins: number;
+  losses: number;
+  isMained: boolean;
+}
 
 export const cleanFetchedCharacter = (character: FetchedCharacter): CleanedCharacter => {
   return {
