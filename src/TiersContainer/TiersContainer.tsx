@@ -11,11 +11,11 @@ interface IProps {
   updateWinsAndLosses: (character: CleanedCharacter, isWin: boolean) => void;
 }
 
-// const filterCharactersByTier = (characters: CleanedCharacter[], tier: number) => {
-//   return characters.filter(character => {
-//     return character.tier === tier;
-//   })
-// }
+const filterCharactersByTier = (characters: CleanedCharacter[], tier: number) => {
+  return characters.filter(character => {
+    return character.tier === tier;
+  })
+}
 
 const displayCharacterContainers = (characters: CleanedCharacter[], displayError: boolean, toggleMained: (character: CleanedCharacter) => void, updateWinsAndLosses: (character: CleanedCharacter, isWin: boolean) => void) => {
   let elementsToReturn = []
