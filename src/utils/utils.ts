@@ -1,31 +1,31 @@
-// export interface FetchedCharacter {
-//     alsoAppearsIn: string[];
-//     availability: string;
-//     images: {
-//       icon: string;
-//       portrait: string;
-//     };
-//     name: string;
-//     order: string;
-//     series: {
-//       icon: string;
-//       name: string;
-//     }
-// }
+export interface FetchedCharacter {
+    alsoAppearsIn: string[];
+    availability: string;
+    images: {
+      icon: string;
+      portrait: string;
+    };
+    name: string;
+    order: string;
+    series: {
+      icon: string;
+      name: string;
+    }
+}
 
-// export interface CleanedCharacter {
-//   images: {
-//     characterIcon: string;
-//     portrait: string;
-//     seriesIcon: string;
-//   };
-//   name: string;
-//   seriesName: string;
-//   tier: number;
-//   wins: number;
-//   losses: number;
-//   isMained: boolean;
-// }
+export interface CleanedCharacter {
+  images: {
+    characterIcon: string;
+    portrait: string;
+    seriesIcon: string;
+  };
+  name: string;
+  seriesName: string;
+  tier: number;
+  wins: number;
+  losses: number;
+  isMained: boolean;
+}
 
 export const cleanFetchedCharacter = (character: FetchedCharacter): CleanedCharacter => {
   return {
