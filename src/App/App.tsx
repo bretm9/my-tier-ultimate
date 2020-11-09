@@ -96,7 +96,7 @@ class App extends Component<IProps, IState> {
               );
             }}
           />
-          {/* <Route 
+          <Route 
             path='/tier-list' 
             render={() => {
               return (
@@ -108,7 +108,7 @@ class App extends Component<IProps, IState> {
               />
               );
             }}
-          /> */}
+          />
           <Redirect to="/" />
         </Switch>
       </main>
