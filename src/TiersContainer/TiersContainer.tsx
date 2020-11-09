@@ -17,15 +17,15 @@ interface IProps {
 //   })
 // }
 
-// const displayCharacterContainers = (characters: CleanedCharacter[], displayError: boolean, toggleMained: (character: CleanedCharacter) => void, updateWinsAndLosses: (character: CleanedCharacter, isWin: boolean) => void) => {
-//   let elementsToReturn = []
-//   for(let i = 1; i <= 5; i++) {
-//     let charactersInTier = filterCharactersByTier(characters, i);
-//     let characterContainer = <CharacterContainer key={i} characters={charactersInTier} displayError={displayError} toggleMained={toggleMained} updateWinsAndLosses={updateWinsAndLosses} />
-//     elementsToReturn.unshift(characterContainer);
-//   }
-//   return elementsToReturn;
-// }
+const displayCharacterContainers = (characters: CleanedCharacter[], displayError: boolean, toggleMained: (character: CleanedCharacter) => void, updateWinsAndLosses: (character: CleanedCharacter, isWin: boolean) => void) => {
+  let elementsToReturn = []
+  for(let i = 1; i <= 5; i++) {
+    let charactersInTier = filterCharactersByTier(characters, i);
+    let characterContainer = <CharacterContainer key={i} characters={charactersInTier} displayError={displayError} toggleMained={toggleMained} updateWinsAndLosses={updateWinsAndLosses} />
+    elementsToReturn.unshift(characterContainer);
+  }
+  return elementsToReturn;
+}
 
 function TiersContainer(props: IProps) {
   const characterContainers = displayCharacterContainers(props.characters, props.displayError, props.toggleMained, props.updateWinsAndLosses)
