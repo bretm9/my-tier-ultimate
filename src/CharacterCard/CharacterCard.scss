@@ -1,0 +1,104 @@
+.character-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #EF5B5B;
+  box-shadow: 0px 4px 9px 0px #323232;
+  min-width: 10em;
+  
+  p {
+    margin: 0;
+    padding: 0;
+    padding-top: 10%;
+    font-size: 1.6em;
+  }
+  
+  section {
+    font-family: 'SNES Italic';
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color:  #2F4858;
+    color: white;
+    font-family: 'SNES Italic';
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+  }
+
+  button:hover {
+    background-color: #FFBA49;
+    color: black;
+  }
+
+  .button-main {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-right: 4%;
+  }
+
+  .button-unmain {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-right: 4%;
+    letter-spacing: 0em;
+    background-color: #FFBA49;
+    color: black;
+  }
+
+  .button-unmain:hover {
+    color: white;
+  }
+
+  img {
+    height: 10em;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .character-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    height: 3.4em;
+  }
+
+  .character-card-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .character-card-buttons {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      font-family: 'Triforce';
+      text-align: center;
+      font-weight: bolder;
+    }
+
+    p {
+      font-family: 'Triforce';
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
