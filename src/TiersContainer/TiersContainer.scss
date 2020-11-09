@@ -1,0 +1,61 @@
+.disclaimer {
+  font-family: 'SNES Italic';
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    // margin: 0;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.tiers-view {
+  display: grid;
+  flex-direction: column;
+  width: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  
+  
+  .tiers-title {
+    font-size: 8em;
+    text-shadow: -4px 4px 0 #000,
+				  4px 4px 0 #000,
+				 4px -4px 0 #000,
+				-4px -4px 0 #000;
+    padding-top: 50%;
+    padding-left: 15%;
+  }
+  
+
+  .tiers-container {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    height: 30em;
+  }
+
+  .character-container {
+    height: 83%;
+    overflow: scroll;
+  }
+
+  #tier-a-plus {
+    background-color: #FF7F7E;
+  }
+
+  #tier-a {
+    background-color: #FFBF7F;
+  }
+
+  #tier-b {
+    background-color: #ffff7f;
+  }
+
+  #tier-c {
+    background-color: #21ADEA;
+  }
+
+  #tier-f {
+    background-color: #6E33F7;
+  }
+
+}
