@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Header.scss'
 
 import logo from '../images/my-tier-ultimate-logo-white.png'
-// import ../image/logo.png
 
 function Header() {
   return (
