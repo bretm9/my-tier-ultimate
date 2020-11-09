@@ -2,8 +2,6 @@ import React from 'react';
 import { CleanedCharacter } from '../utils/utils';
 import './CharacterCard.scss'
 
-// import ../image/logo.png
-
 interface IProps {
   character: CleanedCharacter;
   toggleMained: (character: CleanedCharacter) => void;
