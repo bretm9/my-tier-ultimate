@@ -32,17 +32,17 @@ class App extends Component<IProps, IState> {
   //     .then(data => this.setState({ characters: data }));
   // }
 
-  // updateWinsAndLosses = (character: CleanedCharacter, isWin: boolean) => {
-  //   if (isWin) {
-  //     character.wins += 1
-  //   } else {
-  //     character.losses += 1
-  //   }
-  //   let foundTier = Math.floor(((character.wins / (character.wins + character.losses)) * 5));
-  //   foundTier = foundTier < 1 ? 1 : foundTier;
-  //   character.tier = foundTier;
-  //   this.setState({ characters: [...this.state.characters] });
-  // }
+  updateWinsAndLosses = (character: CleanedCharacter, isWin: boolean) => {
+    if (isWin) {
+      character.wins += 1
+    } else {
+      character.losses += 1
+    }
+    let foundTier = Math.floor(((character.wins / (character.wins + character.losses)) * 5));
+    foundTier = foundTier < 1 ? 1 : foundTier;
+    character.tier = foundTier;
+    this.setState({ characters: [...this.state.characters] });
+  }
 
   // toggleMained = (character: CleanedCharacter) => {
 	// 	character.isMained = !character.isMained;
