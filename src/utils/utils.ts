@@ -1,17 +1,17 @@
-// export interface FetchedCharacter {
-//     alsoAppearsIn: string[];
-//     availability: string;
-//     images: {
-//       icon: string;
-//       portrait: string;
-//     };
-//     name: string;
-//     order: string;
-//     series: {
-//       icon: string;
-//       name: string;
-//     }
-// }
+export interface FetchedCharacter {
+    alsoAppearsIn: string[];
+    availability: string;
+    images: {
+      icon: string;
+      portrait: string;
+    };
+    name: string;
+    order: string;
+    series: {
+      icon: string;
+      name: string;
+    }
+}
 
 // export interface CleanedCharacter {
 //   images: {
