@@ -27,10 +27,10 @@ class App extends Component<IProps, IState> {
     }
   }
 
-  // componentDidMount = () => {
-  //   getCharacters()
-  //     .then(data => this.setState({ characters: data }));
-  // }
+  componentDidMount = () => {
+    getCharacters()
+      .then(data => this.setState({ characters: data }));
+  }
 
   updateWinsAndLosses = (character: CleanedCharacter, isWin: boolean) => {
     if (isWin) {
