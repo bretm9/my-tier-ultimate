@@ -80,7 +80,7 @@ class App extends Component<IProps, IState> {
               )
             }} 
           />
-          {/* <Route 
+          <Route 
             path='/mains' 
             render={() => {
               return (
@@ -96,7 +96,7 @@ class App extends Component<IProps, IState> {
               );
             }}
           />
-          <Route 
+          {/* <Route 
             path='/tier-list' 
             render={() => {
               return (
