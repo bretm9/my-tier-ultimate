@@ -20,9 +20,7 @@ class App extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      characters: [
-        // {"images":{"characterIcon":"https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501674/Ultimate%20Characters/Icons/120px-MarioHeadSSBUWebsite_hkzzpq.png","portrait":"https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501176/Ultimate%20Characters/Portraits/350_emjsmz.png","seriesIcon":"https://res.cloudinary.com/dfen7mkm8/image/upload/v1594501902/Series/mario_ncgezx.svg"},"name":"Mario","seriesName":"Mario","tier":3,"wins":0,"losses":0,"isMained":false}
-      ],
+      characters: [],
       query: ''
     }
   }
