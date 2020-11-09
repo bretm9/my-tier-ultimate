@@ -17,13 +17,13 @@ function convertTierNumberToGrade(tierNumber: number): string | undefined {
   });
 }
 
-// function convertWinRateToPercentage(character: CleanedCharacter): string {
-//   const percentage = ((character.wins / (character.wins + character.losses)) * 100);
-//   if (percentage) {
-//     return percentage.toFixed(1);
-//   }
-//   return '';
-// }
+function convertWinRateToPercentage(character: CleanedCharacter): string {
+  const percentage = ((character.wins / (character.wins + character.losses)) * 100);
+  if (percentage) {
+    return percentage.toFixed(1);
+  }
+  return '';
+}
 
 function CharacterCard(props: IProps) {
   return (
