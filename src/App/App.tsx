@@ -25,10 +25,26 @@ class App extends Component<IProps, IState> {
     }
   }
 
-  componentDidMount = () => {
-    getCharacters()
-      .then(data => this.setState({ characters: data }));
+  componentDidMount = async () => {
+    await this.getCharactersFromLocalStorage();
+    if(this.state.characters.length < 1) {
+      getCharacters()
+      .then(data => {
+        this.setState({ characters: data })
+      });
+    }
   }
+
+  getCharactersFromLocalStorage = async () => {
+    let parsedCharacters;
+    const storedCharacters = localStorage.getItem('characters');
+    if (storedCharacters) {
+      parsedCharacters = await JSON.parse(storedCharacters);
+      this.setState({ characters: parsedCharacters });
+      console.log(this.state);
+    }
+  }
+    
 
   updateWinsAndLosses = (character: CleanedCharacter, isWin: boolean) => {
     if (isWin) {
@@ -40,11 +56,13 @@ class App extends Component<IProps, IState> {
     foundTier = foundTier < 1 ? 1 : foundTier;
     character.tier = foundTier;
     this.setState({ characters: [...this.state.characters] });
+    localStorage.setItem('characters', JSON.stringify(this.state.characters));
   }
 
   toggleMained = (character: CleanedCharacter) => {
 		character.isMained = !character.isMained;
-		this.setState({ characters: [...this.state.characters] });
+    this.setState({ characters: [...this.state.characters] });
+    localStorage.setItem('characters', JSON.stringify(this.state.characters));
   }
 
   updateQuery = (event: any) => {
