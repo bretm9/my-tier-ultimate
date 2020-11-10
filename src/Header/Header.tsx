@@ -4,6 +4,11 @@ import './Header.scss'
 
 import logo from '../images/my-tier-ultimate-logo-white.png'
 
+const clearLocalStorage = () => {
+  localStorage.clear();
+  window.location.reload();
+}
+
 function Header() {
   return (
     <section>
@@ -16,7 +21,9 @@ function Header() {
         <section className='nav-right'>
           <Link className='nav-button' to='/tier-list'>Tier-List</Link>
           <Link className='nav-button' to='/mains'>Mains</Link>
+          
         </section>
+        <button className='reset-button' onClick={clearLocalStorage}>Reset</button>
       </section>
     </section>
   )
