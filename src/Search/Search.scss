@@ -11,4 +11,10 @@
     padding: 2px 23px 2px 30px;
     outline: 0;
    }
+
+  .hidden {
+    position: absolute; 
+    top:-1000px; 
+    left:-1000px;
+  }
 }
