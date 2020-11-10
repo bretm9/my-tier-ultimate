@@ -52,8 +52,8 @@ class App extends Component<IProps, IState> {
     } else {
       character.losses += 1
     }
-    let foundTier = Math.floor(((character.wins / (character.wins + character.losses)) * 5));
-    foundTier = foundTier < 1 ? 1 : foundTier;
+    let foundTier = Math.floor(((character.wins / (character.wins + character.losses)) * 6));
+    foundTier = foundTier < 1 ? 1 : foundTier > 5 ? 5 : foundTier;
     character.tier = foundTier;
     this.setState({ characters: [...this.state.characters] });
     localStorage.setItem('characters', JSON.stringify(this.state.characters));
