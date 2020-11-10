@@ -1,6 +1,7 @@
 # My-Tier Ultimate
 
 > A Front-End Project by [Bret Merritt](https://github.com/bretm9)
+
 [Link to website](https://my-tier-ultimate.herokuapp.com/)
 ---
 ## Contents
