@@ -54,7 +54,6 @@ This website is deployed! Visit [this link](https://my-tier-ultimate.herokuapp.c
 
   <img width="840" alt="Screen Shot 2020-11-09 at 7 17 14 PM" src="https://user-images.githubusercontent.com/14350203/98619297-31d46380-22c0-11eb-86c2-86cd658454aa.png">
 
-
   The search bar on the homepage will filter out characters by name as soon as the user starts typing. This makes it easier to find your main on the homepage. 
 
   <img width="840" alt="Screen Shot 2020-11-09 at 7 14 31 PM" src="https://user-images.githubusercontent.com/14350203/98619333-43b60680-22c0-11eb-9d56-057446e317c8.png">
@@ -66,6 +65,10 @@ This website is deployed! Visit [this link](https://my-tier-ultimate.herokuapp.c
   The tier-list view is unique in that it only shows characters that you have tracked wins and/or losses for. It shows characters in the order of their tier. This view is greatly inspired by common Super Smash Bros tier lists, even when it comes to color choices and ranking names.
 
   <img width="840" alt="Screen Shot 2020-11-09 at 7 16 15 PM" src="https://user-images.githubusercontent.com/14350203/98619404-66e0b600-22c0-11eb-9340-f815ed623ce7.png">
+  
+  I'm proud to say that the app has been deisgned with accessibility in mind, and has recieved a 100% in accessibility in the Chrome Lighthouse Audit:
+  
+  <img width="840" alt="Screen Shot 2020-11-10 at 9 22 02 PM" src="https://user-images.githubusercontent.com/14350203/98842574-027c3e80-2407-11eb-9123-513eeab1546b.png">
 
 > [Back to the top](#my-tier-ultimate)
 ---
