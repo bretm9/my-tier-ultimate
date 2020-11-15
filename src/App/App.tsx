@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import { getCharacters } from '../apiCalls';
+import { getCharacters, getCharactersFromLocalStorage } from '../apiCalls';
 import { CleanedCharacter } from '../utils/utils';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
@@ -26,7 +26,10 @@ class App extends Component<IProps, IState> {
   }
 
   componentDidMount = async () => {
-    await this.getCharactersFromLocalStorage();
+    const parsedCharacters = await getCharactersFromLocalStorage();
+    if (parsedCharacters) {
+      this.setState({ characters: parsedCharacters });
+    }
     if(this.state.characters.length < 1) {
       getCharacters()
       .then(data => {
@@ -35,15 +38,6 @@ class App extends Component<IProps, IState> {
     }
   }
 
-  getCharactersFromLocalStorage = async () => {
-    let parsedCharacters;
-    const storedCharacters = localStorage.getItem('characters');
-    if (storedCharacters) {
-      parsedCharacters = await JSON.parse(storedCharacters);
-      this.setState({ characters: parsedCharacters });
-      console.log(this.state);
-    }
-  }
     
 
   updateWinsAndLosses = (character: CleanedCharacter, isWin: boolean) => {
