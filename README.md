@@ -41,7 +41,9 @@ This website is deployed! Visit [this link](https://my-tier-ultimate.herokuapp.c
   - Router
   - React Testing Library
   - Jest
+  - Continuous Integration
   - Fetch API
+  - localStorage
   - userEvent
   - SASS
   - Git
