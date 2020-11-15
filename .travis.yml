@@ -3,3 +3,5 @@ node_js:
   - "14"
 notifications:
   email: false
+before_install:
+  - npm i -g npm@7.0.3
