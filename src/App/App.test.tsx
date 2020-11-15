@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 import { CleanedCharacter } from '../utils/utils';
-import { getCharacters } from '../apiCalls';
+import { getCharacters, getCharactersFromLocalStorage } from '../apiCalls';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('../apiCalls')
@@ -68,7 +68,8 @@ describe('App', () => {
     ];
   })
   test('should render the header', () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -77,7 +78,8 @@ describe('App', () => {
     expect(screen.getByAltText('my-tier-ultimate-logo')).toBeInTheDocument();
   })
   test('should render character cards', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -90,7 +92,8 @@ describe('App', () => {
   })
 
   test('should be able to search a character', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -101,7 +104,8 @@ describe('App', () => {
     expect(mario).toBeInTheDocument()
   })
   test('should be able to filter out a character', () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -111,7 +115,8 @@ describe('App', () => {
     expect(screen.queryByText('Mario')).not.toBeInTheDocument()
   })
   test('should be able to main a character and view it on the mains screen', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -122,7 +127,8 @@ describe('App', () => {
     expect(screen.getByText('Mario')).toBeInTheDocument()
   })
   test('should not render unmained on the mains screen', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -133,7 +139,8 @@ describe('App', () => {
     expect(screen.queryByText('Luigi')).not.toBeInTheDocument()
   })
   test('should be able to search a character on the mains screen', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -147,7 +154,8 @@ describe('App', () => {
     expect(mario).toBeInTheDocument()
   })
   test('should be able to filter out a character on the mains screen', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -160,7 +168,8 @@ describe('App', () => {
     expect(screen.queryByText('Mario')).not.toBeInTheDocument()
   });
   test('should be able to remove a character from the mains screen and see it disappear', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -173,7 +182,8 @@ describe('App', () => {
     expect(screen.queryByText('Mario')).not.toBeInTheDocument()
   })
   test('should render a character on the tier list screen if their wins have been tracked', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
@@ -186,7 +196,8 @@ describe('App', () => {
     expect(mario).toBeInTheDocument()
   })
   test('should not render a character on the tier list screen if their wins have not been tracked', async () => {
-    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1)
+    (getCharacters as jest.Mock).mockResolvedValue(mockCharacters1);
+    (getCharactersFromLocalStorage as jest.Mock).mockResolvedValue(null)
     render(
       <MemoryRouter>
         <App />
