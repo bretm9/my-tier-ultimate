@@ -17,3 +17,11 @@ export const getCharacters = () => {
   )
 }
 
+export const getCharactersFromLocalStorage = async () => {
+  let parsedCharacters;
+  let storedCharacters = localStorage.getItem('characters');
+  if (storedCharacters) {
+    parsedCharacters = await JSON.parse(storedCharacters);
+  }
+  return parsedCharacters;
+}
