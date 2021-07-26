@@ -30,10 +30,7 @@ export const getCharacters = () => {
       const fetchedCharacters = data.data.fetchCharacters.map((character: FetchedCharacter) => {
         return cleanFetchedCharacter(character)
       })
-      return fetchedCharacters.sort((a: CleanedCharacter, b: CleanedCharacter) => {
-        console.log(`string: ${a.order}, number ${+a.order}`)
-        return parseInt(a.order, 16) - parseInt(b.order, 16)
-      });
+      return fetchedCharacters.reverse()
     })
     .catch(error => console.error(error))
   )
