@@ -1,16 +1,10 @@
 export interface FetchedCharacter {
-    alsoAppearsIn: string[];
-    availability: string;
-    images: {
-      icon: string;
-      portrait: string;
-    };
-    name: string;
-    order: string;
-    series: {
-      icon: string;
-      name: string;
-    }
+  icon: string;
+  name: string;
+  order: string;
+  portrait: string;
+  series_icon: string;
+  series_name: string;
 }
 
 export interface CleanedCharacter {
@@ -25,20 +19,22 @@ export interface CleanedCharacter {
   wins: number;
   losses: number;
   isMained: boolean;
+  order: string;
 }
 
 export const cleanFetchedCharacter = (character: FetchedCharacter): CleanedCharacter => {
   return {
     images: {
-      characterIcon: character.images.icon,
-      portrait: character.images.portrait,
-      seriesIcon: character.series.icon,
+      characterIcon: character.icon,
+      portrait: character.portrait,
+      seriesIcon: character.series_icon,
     },
     name: character.name,
-    seriesName: character.series.name,
+    seriesName: character.series_name,
     tier: 0,
     wins: 0,
     losses: 0,
-    isMained: false
+    isMained: false,
+    order: character.order
   }
 }
