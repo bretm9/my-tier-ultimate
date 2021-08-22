@@ -20,7 +20,7 @@ function Header() {
         </Link>
         <section className='nav-right'>
           <Link className='nav-button' to='/tier-list'>Tier-List</Link>
-          <Link className='nav-button' to='/mains'>Mains</Link>
+          <Link className='nav-button' id='mains' to='/mains'>Mains</Link>
           
         </section>
         <button className='reset-button' onClick={clearLocalStorage}>Reset</button>
