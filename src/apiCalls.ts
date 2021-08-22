@@ -1,6 +1,6 @@
 import { FetchedCharacter, CleanedCharacter, cleanFetchedCharacter } from './utils/utils';
 
-export const getCharacters = () => {
+export const getCharacters: () => Promise<[CleanedCharacter]> = () => {
   return (
     fetch('https://my-tier-ultimate-api.herokuapp.com/graphql', {
       method: 'POST',
